@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        body {
+            margin: 0;
+            /* 初始化 */
+        }
+
+        .navbar {
+            background-image: url(https://www.textures.com/system/gallery/photos/3D%20Scans/ps132392/132392_header.jpg);
+        }
+
+        .container1 {
+            width: 100%;
+            max-width: 1140px;
+            /* max:最大值，寬度最大值到1140px */
+            margin: auto;
+            /* 置中 */          
+        }
+
+        .logo {
+            width: 150px;
+            margin: auto;
+            padding: 12px 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .banner {
+            width: 100%;
+            height: 1080px;
+            background-image: url(./恐龍img/banner.jpg);
+            background-size: cover;
+            /* div有定義寬跟高才看的見 */
+        }
+
+        .anchors {
+            padding: 15px 0;
+            background-color: #415046;
+        }
+
+        .anchor {
+            padding: 12px 25px;
+            /* 按鈕的內距(上下)(左右) */
+            background-color: #72522C;
+            color: #152922;
+            font-family: "微軟正黑體";
+            border-radius: 30px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-content-around {
+            justify-content: space-around;
+            /* 單獨定義flex系列的屬性 */
+        }
+
+        #templateC {
+            width: 100%;
+        }
+
+        .navbar_links {
+                display: none;
+            }
+        
+        .mobile_navbar_toggle {
+            display: none;
+        }
+
+
+
+
+
+
+        .container2 {
+            width: 100%;
+            height: 720px;
+            background-image: url(https://huttonbuilds.com/wp-content/uploads/2018/04/metal-texture.jpg);
+            background-size: cover;   
+        }
+
+        .container2both {
+            width: 100%;
+            max-width: 1140px;
+            /* max:最大值，寬度最大值到1140px */
+            margin: auto;
+            /* 置中 */
+            /* background-color: burlywood; */
+            display: flex;
+        }
+
+        .container2_imgLeft {
+            width: 300px;
+            height: 400px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT57X4EONKdHcuiWV9sRq3z5obCR3FcNbpB_HjinQGzDYyeU6w7&s);
+            background-size: cover;
+            border-radius: 30px;
+            margin-left: 60px;
+            margin-top: 150px;
+        }
+
+        .container2_textLeft {
+            font-family: "微軟正黑體";
+            margin-left: 150px;
+            margin-bottom: 150px;
+            color: cornsilk;
+        }
+
+        .container2_imgCenter {
+            width: 300px;
+            height: 400px;
+            background-image: url(https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/27/1467631932-jurassic-world-bryce-dallas-howard-chris-pratt.jpg?crop=0.588xw:0.883xh;0.00692xw,0.0312xh&resize=480:*);
+            background-size: cover;
+            background-position: -60px ;
+            border-radius: 30px;
+            margin-left: 60px;
+            margin-top: 150px;
+        }
+
+
+        .container2_textCenter {
+            font-family: "微軟正黑體";
+            margin-left: 160px;
+            margin-bottom: 150px;
+            color: cornsilk;
+        }
+
+
+        .container2_imgBottom {
+            width: 300px;
+            height: 400px;
+            background-image: url(https://pics.ettoday.net/images/1131/d1131233.jpg);
+            background-position: -150px ;
+            background-size: cover;
+            border-radius: 30px;
+            margin-left: 60px;
+            margin-top: 150px;
+        }
+
+
+        .container2_textBottom {
+            font-family: "微軟正黑體";
+            margin-left: 190px;
+            margin-bottom: 150px;
+            color: cornsilk;
+        }
+
+        
+
+
+
+
+        .container3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .container3Left {
+            width: 960px;
+            height: 1000px;
+            background-image: url(https://i.pinimg.com/564x/97/6d/fd/976dfd2186876081cfda7924932738f6.jpg);
+            background-size: cover;
+            background-position: -0px -150px;
+            /* background-color: darkcyan; */
+        }
+
+        .container3Left_text {
+            width: 490px;
+            background-color: rgba(71, 69, 69, 25%);
+            /* margin: auto; */
+            /* 置中 */
+            margin-left: 450px;
+            margin-top: 480px;
+            line-height: 30px;
+            font-size: 17px;
+            font-family: "微軟正黑體";
+        }
+
+
+        .container3Right {
+            width: 960px;
+            height: 1000px;
+            background-image: url(https://i.pinimg.com/564x/b6/6d/df/b66ddf890d642554c91a50b1149cd68a.jpg);
+            background-size: cover;
+            background-position: 0px -200px;
+            /* background-color: royalblue; */
+        }
+
+        .container3Right_text {
+            width: 490px;
+            background-color: rgba(71, 69, 69, 10%);
+            /* margin: auto; */
+            /* 置中 */
+            margin-left: 300px;
+            margin-top: 200px;
+            line-height: 30px;
+            font-size: 17px;
+            font-family: "微軟正黑體";
+            color: #545f63;
+        }
+
+
+
+
+        .container4 {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://i.pinimg.com/originals/72/0b/e1/720be120ec4110c2ddcc336826c60b21.gif);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+
+
+        #templaceE {
+            width: 100%;
+            /* height: 800px; */
+            background-color: #415046;
+        }
+
+        .container5 {
+            width: 100%;
+            max-width: 1140px;
+            /* max:最大值，寬度最大值到1140px */
+            margin: 0 auto;
+            /* 置中 */
+            /* background-color: #e2d458;  */
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .container5Left {
+            display: flex;  
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            /* background-color: black; */
+        }
+
+        .container5LTOP {
+            background-color: rgb(16, 145, 16); 
+            background-image: url(./恐龍img/Rafe.jpg);
+            width: 300px;
+            height: 300px;
+            margin-top: 0px;
+        }
+
+        .container5LBOTTOM {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(214, 103, 12);
+            
+        }
+
+        .container5LBOTTOM_text {
+            font-size: 20px;
+            line-height:40px;
+            font-family: "微軟正黑體";
+            margin-top: 100px;
+            margin-left: 90px;
+        }
+
+        .container5Right {
+            display: flex;  
+            flex-direction: row-reverse;
+            /* 水平反轉 */
+            flex-wrap: wrap;
+            /* 換行 */
+            justify-content: space-evenly;
+            /* 平均分配，在容器左右內縮 */
+            /* background-color: blue; */
+        }
+
+        .container5RTOP {
+            background-color: rgb(12, 155, 199);
+            background-image: url(./恐龍img/James.jpg);
+            width: 300px;
+            height: 300px;
+            /* margin-right: 150px; */
+            /* margin-top: 50px;       */
+        }
+
+        .container5RBOTTOM {
+            width: 300px;
+            height: 300px;       
+            background-color: rgb(190, 17, 104);
+            
+        }
+
+        .container5RBOTTOM_text {
+            font-size: 20px;
+            line-height:40px;
+            font-family: "微軟正黑體";
+            margin-top: 100px;
+            margin-left: 60px;
+        }
+
+
+        @media screen and (max-width: 1280px) {
+            .logo {
+                max-width: 150px;
+                margin: auto;
+            }
+
+            .banner {
+                max-width: 100%;
+                background-position: -380px 0px;
+            }
+
+            .container3Left {
+                max-width: 50%;
+            }
+
+            .container3Left_text {
+                max-width: 50%;
+                margin: 250px auto;
+                background-color: rgba(71, 69, 69, 90%);
+                color: ivory;
+            }
+
+            .container3Right {
+                max-width: 50%;
+            }
+
+            .container3Right_text {
+                max-width: 50%;
+                margin: 100px auto;
+                background-color: rgba(71, 69, 69, 100%);
+                color: ivory;
+            }
+
+            .container4 {
+                max-width: 100%;
+                background-position: 0px 100px;
+            }
+
+        }
+
+
+        @media screen and (max-width: 768px){
+
+            .banner {
+                max-width: 100%;
+                background-position: -680px 0px;
+            }
+
+            .container2 {
+                height: 1800px;
+            }
+
+            .container2both {
+                flex-direction: column;
+                /* 直排 */
+            }
+
+            .container2_Left {
+                padding: 80px 0 40px 0;
+            }
+
+            .container2_imgLeft {
+                width: 300px;
+                height: 400px;
+                margin: auto;           
+            }
+
+            .container2_textLeft {
+                margin-left: 290px;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 35px ;
+            }
+
+            .container2_Center {
+                padding: 40px 0 40px 0;
+            }
+
+            .container2_imgCenter {
+                width: 300px;
+                height: 400px; 
+                margin: auto;  
+            }
+
+            .container2_textCenter {
+                margin-left: 300px;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 35px ;
+            }
+
+            .container2_Bottom {
+                padding: 40px 0 40px 0;
+            }
+
+            .container2_imgBottom {
+                width: 300px;
+                height: 400px;
+                margin: auto;
+            }
+
+            .container2_textBottom {
+                margin-left: 320px;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 35px ;              
+            }
+
+            .container3Left {
+                min-width: 50%;
+                background-position: 0;
+            }
+
+            .container3Left_text {
+                margin: 0;
+                margin-left: 80px;
+                margin-top: 450px;
+            }
+
+            .container3Right {
+                min-width: 50%;
+                background-position: 0;
+            }
+
+            .container3Right_text {
+                margin: 0;
+                margin-left: 90px;
+                margin-top: 50px;
+            }
+
+            .container4 {
+                background-position: 15px 15px;
+            }
+
+
+
+            .container5Left {
+                margin-left: 10px;
+                margin-bottom: 50px;
+            }
+
+            .container5LTOP {
+                width: 250px;
+                height: 250px;
+            }
+
+            .container5RBOTTOM {
+                width: 250px;
+                height: 250px;
+            }
+
+            .container5RBOTTOM_text {
+                margin-left: 50px;
+            }
+
+            .container5Right {
+                margin-left: 10px;
+                margin-bottom: 50px;
+            }
+
+            .container5RTOP {
+                width: 250px;
+                height: 250px;
+            }
+
+            .container5LBOTTOM {
+                width: 250px;
+                height: 250px;
+            }
+
+            .container5LBOTTOM_text {
+                margin-left: 80px;
+            }
+        }
+
+
+        @media screen and (max-width: 375px) {
+
+            .mobile_nav_links {
+                display: none;
+                width: 100%;
+                height: calc(100vh);
+                background-color: khaki;
+                position: fixed;
+                top: 0;
+            }
+
+            .mobile_navbar_toggle {
+                display: block;
+                color: lightcoral;
+            }
+            
+            .banner {
+                min-width: 100%;
+                width: 100%;
+                background-position: 1300px 0px;
+            }
+
+            .container2_textLeft {
+                margin-left: 100px;
+            }
+
+            .container2_textCenter {
+                margin-left: 100px;
+            }
+
+            .container2_textBottom {
+                margin-left: 120px;
+            }
+
+            .container3 {
+                flex-direction: column;
+            }
+
+            .container3Left {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .container3Left_text {
+                width: 800px;
+                margin-top: 350px;
+                
+            }
+
+            .container3Right {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .container3Right_text {
+                width: 800px;
+                margin-top: 350px;
+            }
+
+            .container4 {
+                background-position: 0px 0px;
+            }
+
+
+            .container5 {
+                flex-direction: column;
+            }
+
+            
+            
+        }
+        
+            
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://static.newmobilelife.com/wp-content/uploads/2015/04/Jurassic-World00-1024x694.png" alt="">
+                </div>
+
+                <div class="mobile_navbar_toggle" style="background-image: url(https://image.flaticon.com/icons/svg/56/56763.svg);"></div>
+
+
+                <div class="mobile_nav_links">
+                    <span class="close-nav">X</span>
+                    <ul>
+                        <li>
+                            <a href>Section1</a>
+                        </li>
+            
+                        <li>
+                            <a href>Section1</a>
+                        </li>
+            
+                        <li>
+                            <a href>Section1</a>
+                        </li>
+            
+                        <li>
+                            <a href>Section1</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="banner"></div>
+
+        <div class="anchors navbar_links">
+            <div class="container1 d-flex justify-content-around">
+                <a href="#templateC" class="anchor">主要演員</a>
+                <a href="" class="anchor">劇情介紹</a>
+                <a href="" class="anchor">精彩片段</a>
+                <a href="" class="anchor">幕後人員</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <div id="templaceF">
+        <div class="container2">
+            <div class="container2both">
+
+                <div class="container2_Left">
+                    <div class="container2_imgLeft"></div>
+                    <p class="container2_textLeft">達拉斯·霍華德</p>
+                </div>
+
+
+                <div class="container2_Center">
+                    <div class="container2_imgCenter"></div>
+                    <p class="container2_textCenter">克里斯·普瑞特</p>
+                </div>
+
+
+                <div class="container2_Bottom">
+                    <div class="container2_imgBottom"></div>
+                    <p class="container2_textBottom">黄荣亮</p>
+                </div>               
+
+            </div>
+        </div>
+    </div>
+
+    <div id="templaceA">
+        <div class="container3">
+
+            <div class="container3Left">
+                <p class="container3Left_text">自從侏羅紀世界主題樂園與豪華渡假村，被逃出牢籠的恐龍徹底摧毀之後，三年已經過去了，努布拉島也早就遭道人類遺棄，放任存活下來的各種恐龍在叢林中自生自滅。當島上的休眠火山又開始蠢蠢欲動，歐文和克萊兒便展開一項救援行動，率隊前往努布拉島，拯救島上的恐龍免於這場足以讓恐龍再度滅絕的大災難。</p>
+            </div>
+
+            <div class="container3Right">
+                <p class="container3Right_text">歐文一心一意只想找到小藍，他從小養大的一隻迅猛龍，也是他訓練的那群迅猛龍小隊的隊長，牠目前仍在荒野叢林中獨自求生。克萊兒則是因為出於她對恐龍這個物種的尊敬參與這項行動。當他們一群人來到這座危機四伏的小島，岩漿開始到處噴發，他們在試圖搶救小島上的恐龍之際，竟然發掘了一項天大的陰謀，很可能讓全地球陷入自從史前時期以來最可怕的危險處境。</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="templaceD">
+        <div class="container4"></div>
+    </div>
+
+
+
+    <div id="templaceE">
+
+        <div class="container5">
+
+
+            <div class="container5Left">
+                <div class="container5LTOP"></div>
+
+                <div class="container5RBOTTOM">
+                    <p class="container5RBOTTOM_text">詹姆斯·克伦威尔<br>(James Cromwell)</p>
+                </div>              
+            </div> 
+            
+
+
+            <div class="container5Right">
+                <div class="container5RTOP"></div>
+
+                <div class="container5LBOTTOM">
+                    <p class="container5LBOTTOM_text">拉菲·斯波<br>(Rafe Spall)</p>
+                </div>               
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
