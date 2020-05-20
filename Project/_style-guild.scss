@@ -1,0 +1,20 @@
+// 背景顏色
+$bg_meterwhite:#F7F6F4;
+$bg_gold:#BD9F77;
+$bg_pink:rgb(240, 234, 238);
+$bg_lightgreen:rgb(52, 150, 175);
+$bg_black: black;
+$bg_gray: #22201F;
+
+
+//文字顏色
+$font_gray: #F2F2F2;
+$font_black: black;
+
+
+//mixin
+@mixin font-setting ($size,$color,$weight) {
+    font-size:$size;
+    color:$color;
+    font-weight:$weight;
+}

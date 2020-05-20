@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+            <div class="swiper-slide blue-slide swiper-slide-active"
+                style="background-image:url(https://kyoto-minamikaikan.jp/wp-content/uploads/2020/02/1559-m.jpg)">
+                <span style="text-align: center;display: inline-block;width: 100%;height: 100%;"></span>
+            </div>
+            <div class="swiper-slide red-slide swiper-slide-next"
+                style="background-image:url(https://kyoto-minamikaikan.jp/wp-content/uploads/2020/02/1559-m.jpg)">
+                <span style="text-align: center;display: inline-block;width: 100%;height: 100%;"></span>
+            </div>
+            <div class="swiper-slide orange-slide"
+                style="background-image:url(https://kyoto-minamikaikan.jp/wp-content/uploads/2020/02/1559-m.jpg)">
+                <span style="text-align: center;display: inline-block;width: 100%;height: 100%;"></span>
+            </div>
+            <div class="swiper-slide orange-slide"
+                style="background-image:url(https://kyoto-minamikaikan.jp/wp-content/uploads/2020/02/1559-m.jpg)">
+                <span style="text-align: center;display: inline-block;width: 100%;height: 100%;"></span>
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-white"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+
+
+    <script>
+        var startY, startX, endX, endY;
+        var mySwiper = new Swiper('.swiper-container', {
+            preventClicks: true,
+            pagination: '.swiper-pagination',
+            paginationClickable: '.swiper-pagination',
+            preventLinksPropagation: true,
+            spaceBetween: 30,
+            effect: 'fade',
+            onSlideChangeEnd: function (swiper) {
+                alert(swiper.activeIndex + '');
+                // swiper.activeIndex 这个就是索引， 从 0 开始！ 可看一共有多少元素！
+            },
+            onTouchStart: function (swiper, event) {
+                var touch = event.touches[0];
+                startY = touch.pageY;
+                startX = touch.pageX;
+            },
+            onTouchMove: function (swiper, event) {
+                var touch = event.touches[0];
+                endX = touch.pageX - startX;
+                endY = touch.pageY - startY;
+            },
+            onTouchEnd: function (swiper) {
+                if (Math.abs(endX) > 5) {
+                    endX = 0;
+                    return false;
+                } else {
+                    var href;
+                    switch (swiper.index) {
+                        case 1:
+                            href = "https://m.jrj.com.cn/yi/prd/prdxq?type=sr";
+                        case 2:
+                            href = "https://m.jrj.com.cn/yi/prd/prdxq?type=sr";
+                        case 3:
+                            href = "https://m.jrj.com.cn/yi/prd/prdxq?type=sr";
+                        case 4:
+                            href = "https://m.jrj.com.cn/yi/prd/prdxq?type=sr";
+                    }
+                    self.location = href;
+                    endX = 0;
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>
