@@ -74,6 +74,23 @@ var swiper = new Swiper('.swiper-container', {
 
 
 // store區塊左邊放圖片的swiper
+
+
+
+window.onload = function () {
+	lax.setup() // init
+	console.log(window.scrollY);
+	
+	
+	const updateLax = () => {
+		lax.update(window.scrollY)
+		window.requestAnimationFrame(updateLax)
+	}
+	
+	window.requestAnimationFrame(updateLax)
+}
+// Aos 初始化
+AOS.init();
 var swiper1 = new Swiper('#swiper1', {
 	spaceBetween: 0,
 	centeredSlides: true,
@@ -125,19 +142,3 @@ window.onscroll = function () {
 		sectionhight.style.height = "100vh";
 	}
 }
-
-
-window.onload = function () {
-	lax.setup() // init
-	console.log(window.scrollY);
-	
-	
-	const updateLax = () => {
-		lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
-	}
-	
-	window.requestAnimationFrame(updateLax)
-}
-// Aos 初始化
-AOS.init();
