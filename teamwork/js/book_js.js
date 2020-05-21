@@ -25,8 +25,8 @@ function sleep(time) {
 
 sleep(8000).then(() => {
 	//
-	// $('.background').fadeOut(2000)
-	// $('.index').show(4000);
+	$('.background').fadeOut(2000)
+	$('.index').show(4000);
 	
 	
 	// 这里写sleep之后需要去做的事情
