@@ -16,7 +16,7 @@ setInterval(function () {
 }, 400);
 ;
 
-$(".logo img").fadeIn(10000);
+$(".logo img").fadeIn(4500);
 
 function sleep(time) {
 	return new Promise((resolve) => setTimeout(resolve, time));

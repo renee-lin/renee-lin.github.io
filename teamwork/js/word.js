@@ -3,9 +3,9 @@ $.fn.extend({
 	lu_word: function (obj = {}) {
 		var id = $(this).attr('id');
 		this.obj[id] = {
-			text: ["茶亦醉人何須酒"],
-			width:'1000',
-			speed: '500',
+			text: ["茶亦醉人何須酒，書能香我何須花"+"有好茶喝，會喝好茶，是一種清福"],
+			width:'442',
+			speed: '200',
 			sleep: '3000',
 			sign: true,
 			type: true,

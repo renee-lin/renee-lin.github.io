@@ -1,22 +1,5 @@
 
 
-
-// swiper js
-// var swiper = new Swiper('.swiper-container', {
-// 	cssMode: true,
-// 	navigation: {
-// 		nextEl: '.swiper-button-next',
-// 		prevEl: '.swiper-button-prev',
-// 	},
-// 	pagination: {
-// 		el: '.swiper-pagination'
-// 	},
-// 	mousewheel: true,
-// 	keyboard: true,
-// });
-// console.log($('.swiper-slide'))
-// lax js 初始化
-
 // banner swiper
 var swiper = new Swiper('.swiper-container', {
 	// spaceBetween: 30,
@@ -44,7 +27,7 @@ window.onscroll = function () {
 	if (window.scrollY >= 4600) {
 		lax.removeElement(title)
 		lax.removeElement(parallax_text)
-		sectionhight.style.height = "100vh";
+		sectionhight.style.height = "3000px";
 	}
 }
 

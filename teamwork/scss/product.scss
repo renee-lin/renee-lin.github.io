@@ -1,6 +1,8 @@
+@import "_style-guild.scss";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 body {
     margin: 0;
-    font-family: 'nsimsun' !important;
+    font-family: 'cwtexfangsong' !important;
     // font-weight: bolder;
     box-sizing: border-box;
     min-width: 320px;
@@ -523,6 +525,11 @@ body {
             width: 80%;
             margin-left: 82px;
         }
+
+        @media(max-width: 991px) {
+            height: auto;
+            padding: 30px 0;
+        }
         @media (max-width: 768px) {
             margin-left: 50px;
         }
@@ -551,6 +558,9 @@ body {
                 width: 300px;
                 margin-left: 60px;
                 margin-right: 0px !important;
+            }
+            @media (max-width: 991px){
+                margin-bottom: 150px;
             }
             @media (max-width: 768px) {
                 width: 250px;
@@ -591,67 +601,67 @@ body {
 }
 
 // footer
-#footer {
+// #footer {
 
-    // position: relative;
-    width: 100%;
-    // height: 200px;
-    background-color: #9E9F71;
-    position: relative;
-    z-index: 99999;
-    display: inline-block;
+//     // position: relative;
+//     width: 100%;
+//     // height: 200px;
+//     background-color: #9E9F71;
+//     position: relative;
+//     z-index: 99999;
+//     display: inline-block;
 
-    text-align: center;
+//     text-align: center;
 
-    vertical-align: baseline;
-    font-size: 20px;
-    letter-spacing: 0.25em;
+//     vertical-align: baseline;
+//     font-size: 20px;
+//     letter-spacing: 0.25em;
 
-    margin: 0;
-    padding: 0;
+//     margin: 0;
+//     padding: 0;
 
-    text-decoration: none;
+//     text-decoration: none;
 
-    i {
-        font-size: 25px;
-    }
+//     i {
+//         font-size: 25px;
+//     }
 
-    .info {
-        padding-top: 40px;
-        line-height: 40px;
+//     .info {
+//         padding-top: 40px;
+//         line-height: 40px;
 
-        i {
-            color: rgb(246, 200, 202);
-        }
+//         i {
+//             color: rgb(246, 200, 202);
+//         }
 
-        a {
-            color: #212529;
-        }
+//         a {
+//             color: #212529;
+//         }
 
-        p {
-            margin: 0;
-        }
-    }
+//         p {
+//             margin: 0;
+//         }
+//     }
 
-    .follow {
-        padding-top: 40px;
-        padding-bottom: 40px;
+//     .follow {
+//         padding-top: 40px;
+//         padding-bottom: 40px;
 
-    }
+//     }
 
-    .copyright {
-        padding-bottom: 40px;
-    }
+//     .copyright {
+//         padding-bottom: 40px;
+//     }
 
-    .follow,
-    .copyright {
-        p {
-            margin: 0;
-        }
-    }
+//     .follow,
+//     .copyright {
+//         p {
+//             margin: 0;
+//         }
+//     }
 
 
-}
+// }
 
 //以下是徽元的
 .mobileText {
@@ -887,7 +897,67 @@ body {
         }
     }
 }
+footer {
 
+    // position: relative;
+    width: 100%;
+    // height: 200px;
+    background-color: #9E9F71;
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+
+    text-align: center;
+
+    vertical-align: baseline;
+    font-size: $text;
+    letter-spacing: 0.25em;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+
+    i {
+        font-size: 25px;
+    }
+
+    .info {
+        padding-top: 40px;
+        line-height: 40px;
+
+        i {
+            color: rgb(246, 200, 202);
+        }
+
+        a {
+            color: #212529;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .follow {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+    }
+
+    .copyright {
+        padding-bottom: 40px;
+    }
+
+    .follow,
+    .copyright {
+        p {
+            margin: 0;
+        }
+    }
+
+
+}
 // .footer{
 //   margin-top: 18.59%;
 //   ul li{

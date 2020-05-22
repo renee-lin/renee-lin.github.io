@@ -147,6 +147,10 @@ body {
   }
   //  去掉藍色邊框
   // 0519
+
+
+
+  
   // NAVBAR
   // #nav {
   //   width: 100vw;
@@ -1000,6 +1004,12 @@ body {
             width: 515px;
             margin-left: 72px;
             margin-top: 72px;
+            @media (max-width: 1380px) {
+              width: 70%;
+              padding: 0 20px 0 20px;
+              margin: 72px auto;
+              text-align: center;
+            }
             @media (max-width: 576px) {
               width: 100%;
               padding: 0 20px 0 20px;
@@ -1161,42 +1171,3 @@ body {
   }
 }
 
-// 背景
-.background {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.background .tea img {
-  width: 100%;
-  margin: 0;
-}
-.background .waters {
-  position: absolute;
-  left: 69.5vw;
-  top: 15vw;
-  transform: translate(-27%, -30%);
-  clip-path: circle(50% at 50% 50%);
-  width: 20vw;
-  height: 20vw;
-  background-image: url("../img/tea_water2.png");
-  background-position: center;
-  background-size: cover;
-}
-.background .logo {
-  position: absolute;
-  top: 15vw;
-  left: 15vw;
-}
-.background .logo img {
-  display: none;
-}
-.background .index {
-  display: none;
-}
-.background .text_bar {
-  position: absolute;
-  top: 15vw;
-  left: 17.5vw;
-  width: 40vw;
-}

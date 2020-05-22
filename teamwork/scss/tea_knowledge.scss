@@ -1,10 +1,11 @@
 @import "_style-guild.scss";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 
 body {
     margin: 0;
     position: relative;
     // @include fontset($fontsize ,$fontfamily);
-    font-family: 'NSimSun' !important;
+    font-family: 'cwtexfangsong' !important;
 
     p {
         margin: 0;
@@ -12,41 +13,31 @@ body {
 
 
     .about_p {
-        // position: absolute;
-        // writing-mode: vertical-lr;
-        // left: calc(100% - 1115px);
-        // top: 5%;
-        // transform: translateY(500%);
-        // white-space: nowrap; //讓文字不自動換行
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 30%;
-        writing-mode: tb-rl;
+        writing-mode: vertical-lr;
+        left: calc(100% - 1115px);
+        // left: 30%;
+        top: 5%;
+        transform: translateY(500%);
+        white-space: nowrap; //讓文字不自動換行
 
-        // @media (max-width: 768px) {
-          
-        //     position: relative;
-        //     display: block;
-        //     left: 0%;
-        //     top: 26%;
-        //     width: 200px;
-        //     // height: 50px;
-        //     writing-mode: lr-tb;
-        //     padding: 0;
-        //     margin: 40px 20px 5px 60px;
-
-            
-        // }
         @media (max-width: 768px) {
+
             position: relative;
+            // display: block;
             top: auto;
             bottom: auto;
             left: auto;
+
+            transform: unset;
+
             writing-mode: lr-tb;
             padding: 0;
             margin: 50px 20px 5px 60px;
+            width: 75%;
+
         }
+
 
         @media (max-width: 375px) {
             position: relative;
@@ -56,36 +47,26 @@ body {
             // height: 50px;
             writing-mode: lr-tb;
             padding: 0;
-            margin: 80px 20px 5px 60px;
+            margin: 40px 20px 5px 60px;
         }
 
         .ps_1 {
-            // font-size: $small_title;
-            // position: relative;
-            // margin-right: 24px;
-
-            font-weight: normal;
-            // font-family: "cwTeXFangSong";
-            color: #000;
-            font-size: 24px;
-            position: absolute;
-            left: 30px;
-            top: 25%;
-            letter-spacing: 5px;
-            transform: translateY(-50%);
+            font-size: $small_title;
+            position: relative;
+            margin-right: 24px;
 
             @media (max-width: 768px) {
                 position: relative;
                 left: 0px;
             }
-    
+
 
             &::before {
                 content: "";
                 bottom: calc(50% + 75px);
                 display: block;
                 width: 1px;
-                height: 450px;
+                height: 600px;
                 background: #e1e1e1;
                 left: 50%;
                 // bottom: calc(100% + 10px);
@@ -115,11 +96,6 @@ body {
                     height: 1px;
                     width: calc(100% - 102px);
                 }
-
-                // @media (max-width: 375px){
-                //     width: 75%;
-                // }
-
             }
 
             strong {
@@ -145,15 +121,23 @@ body {
             }
         }
 
-
-
     }
-
 
 }
 
-// 0519
-#nav {
+// .navstart {
+//     width: 100%;
+//     display: none;
+//     z-index: 99;
+//     float: left;
+
+//     .nav-link {
+//         color: #f4eee1 !important;
+//     }
+// }
+
+ // 0519
+ #nav {
     padding: 10px 0;
     width: 100vw;
     float: right;
@@ -162,130 +146,131 @@ body {
     z-index: 999999;
 
     .container {
-        padding-left: 24%;
-        align-items: center;
+      padding-left: 24%;
+      align-items: center;
 
-        @media (max-width: 1380px) {
-            padding-left: 15%;
-            max-width: 100%;
+      @media (max-width: 1380px) {
+        padding-left: 15%;
+        max-width: 100%;
+      }
+
+      @media (max-width: 992px) {
+        padding-left: 10%;
+      }
+
+      @media (max-width: 768px) {
+        padding-left: 5%;
+      }
+
+      .navbar-brand {
+        margin-right: 60px;
+
+        @media (max-width: 1100px) {
+          margin-right: 30px;
         }
 
         @media (max-width: 992px) {
-            padding-left: 10%;
+          margin-right: 0px;
+        }
+      }
+
+      ul {
+        @media (max-width: 1380px) {
+          padding-left: 20vw;
         }
 
-        @media (max-width: 768px) {
-            padding-left: 5%;
+        @media (max-width: 1100px) {
+          padding-left: 10vw;
         }
 
-        .navbar-brand {
-            margin-right: 60px;
-
-            @media (max-width: 1100px) {
-                margin-right: 30px;
-            }
-
-            @media (max-width: 992px) {
-                margin-right: 0px;
-            }
+        @media (max-width: 992px) {
+          padding-left: 5vw;
         }
 
-        ul {
-            @media (max-width: 1380px) {
-                padding-left: 20vw;
-            }
+        @media (max-width: 650px) {
+          padding-left: 0vw;
+        }
+      }
 
-            @media (max-width: 1100px) {
-                padding-left: 10vw;
-            }
+      ul li {
+        margin-right: 40px;
 
-            @media (max-width: 992px) {
-                padding-left: 5vw;
-            }
-
-            @media (max-width: 650px) {
-                padding-left: 0vw;
-            }
+        @media (max-width: 1100px) {
+          margin-right: 20px;
         }
 
-        ul li {
-            margin-right: 40px;
-
-            @media (max-width: 1100px) {
-                margin-right: 20px;
-            }
-
-            @media (max-width: 992px) {
-                margin-right: 10px;
-            }
-            &:hover {
-                opacity: 0.5;
-            }
+        @media (max-width: 992px) {
+          margin-right: 10px;
         }
-
-        .logo {
-            min-width: 50px;
-            // margin-right: 100px;
+        &:hover {
+          opacity: 0.5;
         }
+      }
+
+      .logo {
+        min-width: 50px;
+        // margin-right: 100px;
+      }
     }
-}
+  }
 
-// .navbar-nav {
-//     flex-direction: row;
-// }
-@media (max-width: 576px) {
+  // .navbar-nav {
+  //     flex-direction: row;
+  // }
+  @media (max-width: 576px) {
     .navbar-toggler {
-        order: 1;
+      order: 1;
     }
 
     .navbar-brand {
-        order: 2;
-        padding-right: 39.5vw;
-        @media (max-width: 375px) {
-            padding-right: 34vw;
-        }
+      order: 2;
+      padding-right: 39.5vw;
+      @media (max-width: 375px) {
+        padding-right: 34vw;
+      }
     }
 
     .navbar-collapse {
-        order: 3;
+      order: 3;
     }
 
     // .collapse {
     //     flex-direction: column-reverse;
     // }
-}
+  }
 
-.navbar-light .navbar-toggler {
+  .navbar-light .navbar-toggler {
     color: white;
     border-color: white;
-}
+  }
 
-.navbar-light .navbar-toggler-icon {
+  .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+  }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:link,
-.btn-primary:active,
-.btn-primary:not(:disabled):not(.disabled):active {
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:link,
+  .btn-primary:active,
+  .btn-primary:not(:disabled):not(.disabled):active {
     color: #5f7e45;
     background-color: #5f7e45;
     border-color: #5f7e45;
     outline-color: white;
     box-shadow: none;
-}
-// 覆蓋原本的套件顏色
+  }
+  // 覆蓋原本的套件顏色
 
-.btn:focus,
-.btn-primary:focus,
-.btn:active {
+  .btn:focus,
+  .btn-primary:focus,
+  .btn:active {
     // outline: none !important;
     outline: none !important;
     box-shadow: none !important;
-}
-//  去掉藍色邊框
-// 0519
+  }
+  //  去掉藍色邊框
+  // 0519
+
 
 #section_1 {
     width: 100%;
@@ -297,7 +282,7 @@ body {
         width: 100%;
 
         .banner_box {
-            width: 30%;
+            width: 40%;
             // height: 100%;
             position: fixed;
             z-index: -1;
@@ -336,7 +321,7 @@ body {
         }
 
         .about {
-            width: 70%;
+            width: 60%;
             float: right;
             background-image: url("../img/72ppi/br-05.jpg");
                 padding-left: 150px;
@@ -416,7 +401,7 @@ footer {
     text-align: center;
 
     vertical-align: baseline;
-    font-size: 20px;
+    font-size: $text;
     letter-spacing: 0.25em;
 
     margin: 0;
